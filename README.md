@@ -6,7 +6,7 @@
 [Spring](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html)
 ##工具
 [Git](https://git-scm.com/download)
-
+[Lombok](https://www.projectlombok.org)
 ##脚本
 ...sql
 CREATE TABLE `user` (

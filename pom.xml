@@ -85,6 +85,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.17</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -96,7 +103,23 @@
                 <configuration>
                     <fork>true</fork><!-- fork:如果没有该配置，这个devtools不会起作用，即应用不会restart -->
                 </configuration>
-
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>6.0.1</version>
+                <configuration>
+                    <url>jdbc:mysql://localhost/test1?serverTimezone=UTC</url>
+                    <user>root</user>
+                    <password>2000</password>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.17</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
